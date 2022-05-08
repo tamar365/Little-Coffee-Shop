@@ -4,7 +4,8 @@
 }
 
 html,
-body {
+body,
+ul {
     margin: 0;
     padding: 0;
 }
@@ -16,16 +17,14 @@ body {
 }
 
 .nav {
+    margin: 0px;
     background-color: lavenderblush;
     font-weight: bolder;
-    font-size: x-large;
+    font-size: small;
+    box-shadow: 0 0 9px 0 #b1adad inset;
 }
 
-.nav li {
-    display: inline;
-}
-
-.nav a{
+.nav a {
     padding: 1.5em;
     text-decoration: none;
     color: black;
@@ -36,40 +35,54 @@ body {
     background-color: rgba(255, 255, 255, .5);
 }
 
-.mainTitle {
+.mainTitle,
+.mainTitleAbout {
     font-size: 6em;
+    padding: 0.5em;
+    box-shadow: 0 0 9px 0 #b1adad inset;
+    text-shadow: 3px 3px #e7d7d797;
+    margin: 0;
 }
 
-.menu {
-    text-align: center;
-    margin: 1em;
-    background-color: beige;
+h1.mainTitle {
+    margin: 0px;
 }
 
+.menu,
 .about {
     text-align: center;
-    margin: 1em;
+    margin: 0;
+    background-color:white;
+    box-shadow: 0 0 5px 0 #b1adad inset;
+    padding: 2em;
+}
+
+.about,
+.specials {
+    text-align: center;
     padding: 1em;
-    background-color: beige;
+    background-color: white;
     font-size: larger;
 }
 
 .aboutHeader {
-    font-size:x-small;
+    font-size: x-small;
 }
 
 .aboutNav {
-    font-size:medium;
+    font-size: medium;
     padding: 0px;
 }
 
-.mainTitleAbout{
-    font-size: 6.5em;
+.mainTitleAbout {
+    font-size: 3rem;
 }
 
 .secondTitle {
     font-weight: bold;
     font-size: 3em;
+    margin: 0px;
+    text-shadow: 3px 3px #e7d7d797;
 }
 
 .mainFooter {
@@ -77,10 +90,13 @@ body {
     background-size: cover;
     text-align: center;
     padding: 1.5em;
+    box-shadow: 0 0 8px 0 #b1adad inset;
+    margin: 0px;
+    overflow: hidden;
 }
 
-.mainFooterAbout{
-    font-size: small;
+.mainFooterAbout {
+    font-size: x-small;
     padding: 0.5em;
 }
 
@@ -91,18 +107,24 @@ body {
 
 .cart {
     text-align: center;
-    margin: 4em 12em 4em 12em;
-    margin-top: 5em;
+    margin: 8em 20em 8em 20em;
     background-color: lavenderblush;
+    box-shadow: 5px 5px 5px 5px #888888;
 }
 
 .shopItem {
-    margin-bottom: 3em;
+    margin: 3em;
+    padding: 1em;
+    box-shadow: 5px 5px 5px 5px #888888;
 }
 
 .priceAndAddButton {
     padding: 1em;
     font-size: x-large;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
 .total {
@@ -112,6 +134,8 @@ body {
 .imageOfShopItem {
     height: 70%;
     width: 85%;
+    box-shadow: 3px 3px 3px #888888;
+    margin-top: 3em;
 }
 
 .titleOfShopItem,
@@ -120,8 +144,17 @@ body {
     font-weight: bolder;
 }
 
+.addButton {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+button>i {
+    pointer-events: none;
+}
+
 .titleOfShopItem {
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 .productsContainer {
@@ -197,9 +230,11 @@ body {
 }
 
 button {
-    background-color: beige;
     cursor: pointer;
     font-size: larger;
+    box-shadow: 0 0 8px 0 #b1adad inset;
+    background: none;
+    border: none;
 }
 
 .titleOfTotal,
@@ -229,6 +264,115 @@ button {
 }
 
 .footerIconsAbout {
-    font-size: large;
+    font-size: small;
     padding: 0px;
-} 
+}
+
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 43px;
+    height: 5px;
+    background-color: #333;
+    margin: 7px 0;
+    transition: 0.4s;
+}
+
+.bar1About,
+.bar2About,
+.bar3About,
+.bar1Special,
+.bar2Special,
+.bar3Special {
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(46, 46, 46);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.nav {
+    transition: margin-right .5s;
+    padding: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: smaller;
+    }
+}
+@media screen and (max-height: 450px) {
+    .sidenavAbout {
+        padding-top: 15px;
+    }
+    .sidenavAbout a {
+        font-size: smaller;
+    }
+}
+@media screen and (max-height: 450px) {
+    .sidenavSpecial {
+        padding-top: 15px;
+    }
+    .sidenavSpecial a {
+        font-size: smaller;
+    }
+}
+
+.sidenavAbout a {
+    font-size: smaller;
+}
+
+.sidenavSpecial a {
+    font-size: smaller;
+}
+
+.shopItem:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}

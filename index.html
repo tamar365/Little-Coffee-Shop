@@ -6,21 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/39ee6adc44.js" crossorigin="anonymous"></script>
     <title>My Little Coffee Shop | HOME</title>
-    <meta name="description" content="Enter description here.">
     <link rel="stylesheet" href="littleCoffeeShop.css" />
 </head>
 <body>
+    <div id="mySidenav" class="sidenav">
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="specials.html">SPECIALS</a>
+        <a href="#">CONTACT</a>
+    </div>
+     
+    <div id="main">
     <header class="header">
         <nav class="nav">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-            </ul>
+            <div class="container" onclick="openNav()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
         </nav>
         <h1 class="mainTitle">MY LITTLE COFFEE SHOP</h1>
     </header>
     <section class="menu">
-        <h2 class="secondTitle">WHAT'S IN THE MENU...</h2>
+        <h2 class="secondTitle">WHAT'S ON THE MENU...</h2>
         <br>
         <div class="productsContainer">
             <div class="brownie shopItem">
@@ -30,7 +39,7 @@
                 <img src="./images/brownie.jpg" class="imageOfShopItem">
                 <div class="priceAndAddButton">
                     <span class="priceOfShopItem">10$</span>
-                    <button type="button" class="addButton">ADD TO CART</button>
+                    <button type="button" class="addButton"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
                 </div>
             </div>
             <div class="cupcake shopItem">
@@ -40,7 +49,7 @@
                 <img src="./images/cupcake.jpg" class="imageOfShopItem">
                 <div class="priceAndAddButton">
                     <span class="priceOfShopItem">15$</span>
-                    <button type="button" class="addButton">ADD TO CART</button>
+                    <button type="button" class="addButton"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
                 </div>
             </div>
             <div class="eclair shopItem">
@@ -50,7 +59,7 @@
                 <img src="./images/eclair.jpg" class="imageOfShopItem">
                 <div class="priceAndAddButton">
                     <span class="priceOfShopItem">10$</span>
-                    <button type="button" class="addButton">ADD TO CART</button>
+                    <button type="button" class="addButton"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
                 </div>
             </div>
             <div class="cappuccino shopItem">
@@ -60,7 +69,7 @@
                 <img src="./images/cappuccino.jpg" class="imageOfShopItem">
                 <div class="priceAndAddButton">
                     <span class="priceOfShopItem">5$</span>
-                    <button type="button" class="addButton">ADD TO CART</button>
+                    <button type="button" class="addButton"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
                 </div>
             </div>
             <div class="green_tea shopItem">
@@ -70,7 +79,7 @@
                 <img src="./images/greentea.jpg" class="imageOfShopItem">
                 <div class="priceAndAddButton">
                     <span class="priceOfShopItem">5$</span>
-                    <button type="button" class="addButton">ADD TO CART</button>
+                    <button type="button" class="addButton"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>
@@ -106,6 +115,7 @@
                 <li><i class='far fa-thumbs-up'></i></li>
             </ul>
     </footer>
+    </div>
 </body>
 <script src="littleCoffeeShop.js"></script>
 
