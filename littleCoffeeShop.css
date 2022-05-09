@@ -8,6 +8,7 @@ body,
 ul {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 .header {
@@ -19,8 +20,6 @@ ul {
 .nav {
     margin: 0px;
     background-color: lavenderblush;
-    font-weight: bolder;
-    font-size: small;
     box-shadow: 0 0 9px 0 #b1adad inset;
 }
 
@@ -35,7 +34,14 @@ ul {
     background-color: rgba(255, 255, 255, .5);
 }
 
-.mainTitle,
+.mainTitle {
+    font-size: 3em;
+    padding: 0.5em;
+    box-shadow: 0 0 9px 0 #b1adad inset;
+    text-shadow: 3px 3px #e7d7d797;
+    margin: 0;
+}
+
 .mainTitleAbout {
     font-size: 6em;
     padding: 0.5em;
@@ -49,19 +55,27 @@ h1.mainTitle {
 }
 
 .menu,
-.about {
+.about, .specials {
     text-align: center;
     margin: 0;
-    background-color:white;
     box-shadow: 0 0 5px 0 #b1adad inset;
     padding: 2em;
+    background-image: url(./images/dots.jpg);
+    background-size: cover;
+}
+
+.bodyContact{
+    background-image: url(./images/dots.jpg);
+    background-size: cover;
+    background-position: center;
+  background-repeat: no-repeat;
 }
 
 .about,
-.specials {
+.specials,
+.contact {
     text-align: center;
     padding: 1em;
-    background-color: white;
     font-size: larger;
 }
 
@@ -80,7 +94,7 @@ h1.mainTitle {
 
 .secondTitle {
     font-weight: bold;
-    font-size: 3em;
+    font-size: 2em;
     margin: 0px;
     text-shadow: 3px 3px #e7d7d797;
 }
@@ -93,6 +107,10 @@ h1.mainTitle {
     box-shadow: 0 0 8px 0 #b1adad inset;
     margin: 0px;
     overflow: hidden;
+}
+
+.footerTitleHome{
+    font-size: 0.8em;
 }
 
 .mainFooterAbout {
@@ -112,15 +130,20 @@ h1.mainTitle {
     box-shadow: 5px 5px 5px 5px #888888;
 }
 
+html { background-color:#eae6e6; }
+
 .shopItem {
     margin: 3em;
     padding: 1em;
     box-shadow: 5px 5px 5px 5px #888888;
+    height: 15%;
+    width: 27%;
+    background-color: white;
 }
 
 .priceAndAddButton {
     padding: 1em;
-    font-size: x-large;
+    font-size: 1em;
     display: flex;
     justify-content: space-between;
     padding-left: 3em;
@@ -132,8 +155,8 @@ h1.mainTitle {
 }
 
 .imageOfShopItem {
-    height: 70%;
-    width: 85%;
+    height: 40%;
+    width: 65%;
     box-shadow: 3px 3px 3px #888888;
     margin-top: 3em;
 }
@@ -154,13 +177,13 @@ button>i {
 }
 
 .titleOfShopItem {
-    font-size: xx-large;
+    font-size: 1.3rem;
 }
 
 .productsContainer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .buttonOfPurchase {
@@ -180,11 +203,11 @@ button>i {
 }
 
 .cartTitle {
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 .titlesOfCart {
-    font-size: x-large;
+    font-size: 1.3em;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -219,7 +242,7 @@ button>i {
 
 .priceOfCart {
     align-items: center;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .cartPriceAndRemoveButton {
@@ -240,7 +263,7 @@ button {
 .titleOfTotal,
 .priceOfCartTotal {
     font-weight: bold;
-    font-size: x-large;
+    font-size: 1.5em;
 }
 
 .titleOfCartProduct {
@@ -258,8 +281,12 @@ button {
     text-align: center;
 }
 
+.mainFooter{
+    padding: 0.5em;
+}
+
 .footerIcons {
-    font-size: x-large;
+    font-size: small;
     padding: 0px;
 }
 
@@ -267,7 +294,6 @@ button {
     font-size: small;
     padding: 0px;
 }
-
 
 .container {
     display: inline-block;
@@ -277,10 +303,10 @@ button {
 .bar1,
 .bar2,
 .bar3 {
-    width: 43px;
-    height: 5px;
+    width: 20px;
+    height: 2px;
     background-color: #333;
-    margin: 7px 0;
+    margin: 4px 0;
     transition: 0.4s;
 }
 
@@ -313,7 +339,7 @@ button {
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: smaller;
     color: #818181;
     display: block;
     transition: 0.3s;
